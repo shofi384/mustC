@@ -1,14 +1,11 @@
-/**
- * 
- */
-package test;
-
-import java.util.Scanner;
 
 /**
  * @author shofi
  *
  */
+
+import java.util.Scanner;
+
 public class stairWays {
 
 	/**
