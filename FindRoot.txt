@@ -1,0 +1,21 @@
+/* Finds the root of the given int n without using any libraray function */
+
+public class FindRoot {
+	public static int root(int n, int min, int max) {
+		if(max<min)	// no perfect(int) root
+			return -1;
+		int guess = (min+max)/2;
+
+		if((guess*guess) == n)	// root found
+			return guess;
+		else if((guess*guess)<n)	// root is greater then guess
+			min = min+1;
+		else if((guess*guess)>n)	// root is less than guess
+			max = max-1;
+		return root(n, min, max);
+	}
+
+	public static void main(String[] args) {
+		System.out.println(root(99, 1, 99));
+	}
+}
