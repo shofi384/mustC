@@ -9,9 +9,9 @@ let findRoot = (n, min, max) => {
     let guess = Math.floor((min+max) / 2);
     if((guess*guess) == n)	// root found
         return `${n}'s root is ${guess}`;
-    else if((guess*guess)<n)	// root is greater then guess
-			min = guess + 1;
-    else if((guess*guess)>n)	// root is less than guess
+    else if((guess*guess) < n)	// root is greater then guess
+        min = guess + 1;
+    else if((guess*guess) > n)	// root is less than guess
         max = guess - 1;
     return findRoot(n, min, max);
 }
